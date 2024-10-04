@@ -51,13 +51,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateFromCathetus(cathetus: Double) {
-        val hypotenuse = cathetus * Math.sqrt(2.0)
-        val area = (cathetus * cathetus) / 2
+        val hypotenuse = Math.round(cathetus * Math.sqrt(2.0))
+        val area = Math.round((cathetus * cathetus) / 2)
         resultTextView.text = "Гипотенуза: $hypotenuse\nПлощадь: $area"
     }
 
     private fun calculateFromHypotenuse(hypotenuse: Double) {
-        val cathetus = hypotenuse / Math.sqrt(2.0)
+        val cathetus = Math.round(hypotenuse / Math.sqrt(2.0))
         val area = (cathetus * cathetus) / 2
         resultTextView.text = "Катет: $cathetus\nПлощадь: $area"
     }
@@ -67,5 +67,4 @@ class MainActivity : AppCompatActivity() {
         val hypotenuse = cathetus * Math.sqrt(2.0)
         resultTextView.text = "Катет: $cathetus\nГипотенуза: $hypotenuse"
     }
-}
 }

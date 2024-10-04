@@ -23,36 +23,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/inputElement"
-        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
-        android:layout_width="76dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:hint="K, Г, S"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/inputValue"
-        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
-        android:layout_width="176dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Значение K, Г, S"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputElement" />
-
     <TextView
         android:id="@+id/resultView"
         android:layout_width="wrap_content"
@@ -64,5 +34,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputValue" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="624dp"
+        android:hint="значение"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputElement" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="c,g,s"
+        app:layout_constraintBottom_toTopOf="@+id/inputValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
